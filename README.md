@@ -1,2 +1,0 @@
-# talller-git-adso
-Taller
