@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ingreso al sistema</title>
+
+<link rel="stylesheet" href="/talller-git-adso/estilos.css">
+
+
+
+
+</head>
+<body>
+
+
+<!-- =================================================================
+     PANTALLA 1: el formulario de ingreso
+     ================================================================= -->
+<div class="tarjeta" id="pantallaIngreso">
+
+    <h1>Ingreso al sistema</h1>
+    <p class="subtitulo">Digite su usuario y su contraseña</p>
+
+    <label for="usuario">Usuario</label>
+    <input type="text" id="usuario">
+
+    <label for="clave">Contraseña</label>
+    <input type="password" id="clave">
+
+    <button onclick="entrar()">Entrar</button>
+
+    <!-- Aquí aparecen los mensajes. Empieza vacío. -->
+    <div id="mensaje"></div>
+
+    <p class="ayuda">
+        <b>Usuarios de prueba</b><br>
+        ana / 12345<br>
+        luis / 54321<br>
+        carlos / 11111 (cuenta inactiva)<br>
+        cesar /123
+
+    </p>
+
+</div>
+
+
+<!-- =================================================================
+     PANTALLA 2: la bienvenida (empieza oculta)
+     ================================================================= -->
+<div class="tarjeta" id="pantallaBienvenida" style="display: none;">
+
+    <h1>Bienvenido</h1>
+    <p class="subtitulo" id="saludo"></p>
+
+    <p id="fechaAnterior" style="font-size: 14px; color: #555555;"></p>
+
+    <h2 style="font-size: 15px; color: #555555;">Usuarios guardados</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Estado</th>
+                <th>Último ingreso</th>
+            </tr>
+        </thead>
+        <tbody id="filasTabla"></tbody>
+    </table>
+
+    <button onclick="salir()">Salir</button>
+
+</div>
+
+<script src="/talller-git-adso/script.js"></script>
+</body>
+</html>
